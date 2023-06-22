@@ -46,7 +46,6 @@ const PlayerCard = ({ name, numAffilie }) => {
               </svg>
             </div>
           </a>
-
         </div>
 
         <div class="mt-8 mx-auto grid grid-cols-1 gap-6 lg:grid-cols-3">
@@ -54,7 +53,7 @@ const PlayerCard = ({ name, numAffilie }) => {
             <section>
               <div class="bg-gray-100 shadow sm:rounded-lg ">
                 <div class="px-4 py-5 sm:px-6">
-                  <h2 class="text-lg leading-6 font-medium text-gray-900">
+                  <h2 class="text-2xl leading-6 font-medium text-gray-900">
                     Information du joueur
                   </h2>
                 </div>
@@ -112,7 +111,7 @@ const PlayerCard = ({ name, numAffilie }) => {
           <section class="lg:col-start-3 lg:col-span-1">
             <div class="bg-gray-100  shadow sm:rounded-lg ">
               <div class="px-4 py-5 sm:px-6">
-                <h2 class="text-lg leading-6 font-medium text-gray-900">
+                <h2 class="text-2xl leading-6 font-medium text-gray-900">
                   Résultats récents
                 </h2>
               </div>
@@ -121,34 +120,29 @@ const PlayerCard = ({ name, numAffilie }) => {
                   <li>
                     <div class="relative pb-8">
                       <span
-                        class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                        class="absolute top-4 left-3 -ml-px h-full w-0.5 bg-gray-200"
                         aria-hidden="true"
                       ></span>
                       <div class="relative flex space-x-3">
                         <div>
-                          <span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
+                          <span class="h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
                             <svg
-                              class="w-5 h-5 text-white"
                               xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                              aria-hidden="true"
+                              width="16"
+                              height="16"
+                              fill="#FFFFFF"
+                              class="bi bi-check-lg"
+                              viewBox="0 0 16 16"
                             >
-                              <path
-                                fill-rule="evenodd"
-                                d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                clip-rule="evenodd"
-                              />
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                             </svg>
                           </span>
                         </div>
-                        <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                        <div class="min-w-0 flex-1 flex justify-between space-x-4">
                           <div>
-                            <p class="text-sm text-gray-500">
-                              Applied to
-                              <p class="font-medium text-gray-900">
-                                Front End Developer
-                              </p>
+                            <p class="text-sm font-medium text-gray-900">
+                              6/2 1/6 6/0
+                              <p class=" text-gray-500">VS Antoine Dejonghe</p>
                             </p>
                           </div>
                           <div class="text-right text-sm whitespace-nowrap text-gray-500">
@@ -158,153 +152,172 @@ const PlayerCard = ({ name, numAffilie }) => {
                       </div>
                     </div>
                   </li>
-
                   <li>
                     <div class="relative pb-8">
                       <span
-                        class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                        class="absolute top-4 left-3 -ml-px h-full w-0.5 bg-gray-200"
                         aria-hidden="true"
                       ></span>
                       <div class="relative flex space-x-3">
                         <div>
-                          <span class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
+                          <span class="h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
                             <svg
-                              class="w-5 h-5 text-white"
                               xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                              aria-hidden="true"
+                              width="16"
+                              height="16"
+                              fill="#FFFFFF"
+                              class="bi bi-check-lg"
+                              viewBox="0 0 16 16"
                             >
-                              <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                             </svg>
                           </span>
                         </div>
-                        <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                        <div class="min-w-0 flex-1 flex justify-between space-x-4">
                           <div>
-                            <p class="text-sm text-gray-500">
-                              Advanced to phone screening by{" "}
-                              <p class="font-medium text-gray-900">
-                                Bethany Blake
-                              </p>
+                            <p class="text-sm font-medium text-gray-900">
+                              6/2 1/6 6/0
+                              <p class=" text-gray-500">VS Antoine Dejonghe</p>
                             </p>
                           </div>
                           <div class="text-right text-sm whitespace-nowrap text-gray-500">
-                            <time datetime="2020-09-22">Sep 22</time>
+                            <time datetime="2020-09-20">Sep 20</time>
                           </div>
                         </div>
                       </div>
                     </div>
                   </li>
-
                   <li>
                     <div class="relative pb-8">
                       <span
-                        class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                        class="absolute top-4 left-3 -ml-px h-full w-0.5 bg-gray-200"
                         aria-hidden="true"
                       ></span>
                       <div class="relative flex space-x-3">
                         <div>
-                          <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                          <span class="h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
                             <svg
-                              class="w-5 h-5 text-white"
                               xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                              aria-hidden="true"
+                              width="16"
+                              height="16"
+                              fill="#FFFFFF"
+                              class="bi bi-check-lg"
+                              viewBox="0 0 16 16"
                             >
-                              <path
-                                fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd"
-                              />
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                             </svg>
                           </span>
                         </div>
-                        <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                        <div class="min-w-0 flex-1 flex justify-between space-x-4">
                           <div>
-                            <p class="text-sm text-gray-500">
-                              Completed phone screening with{" "}
-                              <p class="font-medium text-gray-900">
-                                Martha Gardner
-                              </p>
+                            <p class="text-sm font-medium text-gray-900">
+                              6/2 1/6 6/0
+                              <p class=" text-gray-500">VS Antoine Dejonghe</p>
                             </p>
                           </div>
                           <div class="text-right text-sm whitespace-nowrap text-gray-500">
-                            <time datetime="2020-09-28">Sep 28</time>
+                            <time datetime="2020-09-20">Sep 20</time>
                           </div>
                         </div>
                       </div>
                     </div>
                   </li>
-
                   <li>
                     <div class="relative pb-8">
                       <span
-                        class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                        class="absolute top-4 left-3 -ml-px h-full w-0.5 bg-gray-200"
                         aria-hidden="true"
                       ></span>
                       <div class="relative flex space-x-3">
                         <div>
-                          <span class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
+                          <span class="h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
                             <svg
-                              class="w-5 h-5 text-white"
                               xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                              aria-hidden="true"
+                              width="16"
+                              height="16"
+                              fill="#FFFFFF"
+                              class="bi bi-check-lg"
+                              viewBox="0 0 16 16"
                             >
-                              <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                             </svg>
                           </span>
                         </div>
-                        <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                        <div class="min-w-0 flex-1 flex justify-between space-x-4">
                           <div>
-                            <p class="text-sm text-gray-500">
-                              Advanced to interview by{" "}
-                              <p class="font-medium text-gray-900">
-                                Bethany Blake
-                              </p>
+                            <p class="text-sm font-medium text-gray-900">
+                              6/2 1/6 6/0
+                              <p class=" text-gray-500">VS Antoine Dejonghe</p>
                             </p>
                           </div>
                           <div class="text-right text-sm whitespace-nowrap text-gray-500">
-                            <time datetime="2020-09-30">Sep 30</time>
+                            <time datetime="2020-09-20">Sep 20</time>
                           </div>
                         </div>
                       </div>
                     </div>
                   </li>
-
                   <li>
                     <div class="relative pb-8">
+                      <span
+                        class="absolute top-4 left-3 -ml-px h-full w-0.5 bg-gray-200"
+                        aria-hidden="true"
+                      ></span>
                       <div class="relative flex space-x-3">
                         <div>
-                          <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                          <span class="h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
                             <svg
-                              class="w-5 h-5 text-white"
                               xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                              aria-hidden="true"
+                              width="16"
+                              height="16"
+                              fill="#FFFFFF"
+                              class="bi bi-check-lg"
+                              viewBox="0 0 16 16"
                             >
-                              <path
-                                fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd"
-                              />
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                             </svg>
                           </span>
                         </div>
-                        <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                        <div class="min-w-0 flex-1 flex justify-between space-x-4">
                           <div>
-                            <p class="text-sm text-gray-500">
-                              Completed interview with
-                              <p class="font-medium text-gray-900">
-                                Katherine Snyder
-                              </p>
+                            <p class="text-sm font-medium text-gray-900">
+                              6/2 1/6 6/0
+                              <p class=" text-gray-500">VS Antoine Dejonghe</p>
                             </p>
                           </div>
                           <div class="text-right text-sm whitespace-nowrap text-gray-500">
-                            <time datetime="2020-10-04">Oct 4</time>
+                            <time datetime="2020-09-20">Sep 20</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="relative">
+                      <div class="relative flex space-x-3">
+                        <div>
+                          <span class="h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="#FFFFFF"
+                              class="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </span>
+                        </div>
+                        <div class="min-w-0 flex-1 flex justify-between space-x-4">
+                          <div>
+                            <p class="text-sm font-medium text-gray-900">
+                              6/2 1/6 6/0
+                              <p class=" text-gray-500">VS Antoine Dejonghe</p>
+                            </p>
+                          </div>
+                          <div class="text-right text-sm whitespace-nowrap text-gray-500">
+                            <time datetime="2020-09-20">Sep 20</time>
                           </div>
                         </div>
                       </div>
