@@ -49,7 +49,7 @@ const PlayerCard = ({ name, numAffilie }) => {
         </div>
 
         <div class="mt-8 mx-auto grid grid-cols-1 gap-6 lg:grid-cols-3">
-          <div class="space-y-6 lg:col-start-1 lg:col-span-2 ">
+          <div class="lg:col-start-1 lg:col-span-2">
             <section>
               <div class="bg-gray-100 shadow sm:rounded-lg ">
                 <div class="px-4 py-5 sm:px-6">
