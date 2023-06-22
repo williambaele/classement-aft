@@ -85,7 +85,6 @@ const PlayerCard = ({ name }) => {
               </div>
             </section>
           </div>
-
           <section class="lg:col-start-3 lg:col-span-1">
             <div class="bg-gray-100  shadow sm:rounded-lg ">
               <div class="px-4 py-5 sm:px-6">
@@ -93,9 +92,8 @@ const PlayerCard = ({ name }) => {
                   Résultats récents
                 </h2>
               </div>
-
               <div class="border-t border-gray-200 ">
-                <ul role="list" class="p-6">
+                <ul class="p-6">
                   <li>
                     <div class="relative pb-8">
                       <span
@@ -123,10 +121,10 @@ const PlayerCard = ({ name }) => {
                         <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                           <div>
                             <p class="text-sm text-gray-500">
-                              Applied to{" "}
-                              <a href="#" class="font-medium text-gray-900">
+                              Applied to
+                              <p class="font-medium text-gray-900">
                                 Front End Developer
-                              </a>
+                              </p>
                             </p>
                           </div>
                           <div class="text-right text-sm whitespace-nowrap text-gray-500">
@@ -161,9 +159,9 @@ const PlayerCard = ({ name }) => {
                           <div>
                             <p class="text-sm text-gray-500">
                               Advanced to phone screening by{" "}
-                              <a href="#" class="font-medium text-gray-900">
+                              <p class="font-medium text-gray-900">
                                 Bethany Blake
-                              </a>
+                              </p>
                             </p>
                           </div>
                           <div class="text-right text-sm whitespace-nowrap text-gray-500">
@@ -202,9 +200,9 @@ const PlayerCard = ({ name }) => {
                           <div>
                             <p class="text-sm text-gray-500">
                               Completed phone screening with{" "}
-                              <a href="#" class="font-medium text-gray-900">
+                              <p class="font-medium text-gray-900">
                                 Martha Gardner
-                              </a>
+                              </p>
                             </p>
                           </div>
                           <div class="text-right text-sm whitespace-nowrap text-gray-500">
@@ -239,9 +237,9 @@ const PlayerCard = ({ name }) => {
                           <div>
                             <p class="text-sm text-gray-500">
                               Advanced to interview by{" "}
-                              <a href="#" class="font-medium text-gray-900">
+                              <p class="font-medium text-gray-900">
                                 Bethany Blake
-                              </a>
+                              </p>
                             </p>
                           </div>
                           <div class="text-right text-sm whitespace-nowrap text-gray-500">
@@ -276,9 +274,9 @@ const PlayerCard = ({ name }) => {
                           <div>
                             <p class="text-sm text-gray-500">
                               Completed interview with
-                              <a href="#" class="font-medium text-gray-900">
+                              <p class="font-medium text-gray-900">
                                 Katherine Snyder
-                              </a>
+                              </p>
                             </p>
                           </div>
                           <div class="text-right text-sm whitespace-nowrap text-gray-500">
