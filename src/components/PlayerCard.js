@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
-import SearchInput from "./SearchInput";
 import axios from "axios";
 import cheerio from "cheerio";
 
-const PlayerCard = () => {
+const PlayerCard = ({affilie}) => {
   //PLAYER INFOS
   const [points, setPoints] = useState("");
   const [name, setName] = useState("");
   const [currentClassement, setCurrentClassement] = useState("");
-  const [affilie, setAffilie] = useState("");
-  const handleSearch = (value) => {
-    setAffilie(value);
-  };
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -68,9 +64,6 @@ const PlayerCard = () => {
               </h1>
             </div>
           </div>
-          <div class="mt-6 flex flex-col-reverse justify-stretch space-y-4 space-y-reverse sm:flex-row-reverse sm:justify-end sm:space-x-reverse sm:space-y-0 sm:space-x-3 md:mt-0 md:flex-row md:space-x-3">
-            <SearchInput onSearch={handleSearch} />
-          </div>
         </div>
 
         <div class="mt-8 max-w-3xl mx-auto grid grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
@@ -85,20 +78,14 @@ const PlayerCard = () => {
                 <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
                   <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                     <div class="sm:col-span-1">
-                      <dt class="text-sm font-medium text-gray-500">
-                        Club
-                      </dt>
-                      <dd class="mt-1 text-sm text-gray-900">
-                        Davis
-                      </dd>
+                      <dt class="text-sm font-medium text-gray-500">Club</dt>
+                      <dd class="mt-1 text-sm text-gray-900">Davis</dd>
                     </div>
                     <div class="sm:col-span-1">
                       <dt class="text-sm font-medium text-gray-500">
                         Actif depuis
                       </dt>
-                      <dd class="mt-1 text-sm text-gray-900">
-                        12 mars 2019
-                      </dd>
+                      <dd class="mt-1 text-sm text-gray-900">12 mars 2019</dd>
                     </div>
                     <div class="sm:col-span-1">
                       <dt class="text-sm font-medium text-gray-500">
@@ -140,13 +127,10 @@ const PlayerCard = () => {
             </section>
           </div>
 
-          <section
-            aria-labelledby="timeline-title"
-            class="lg:col-start-3 lg:col-span-1"
-          >
-            <div class="bg-white px-4 py-5 shadow sm:rounded-lg sm:px-6">
-              <h2 id="timeline-title" class="text-lg font-medium text-gray-900">
-                Timeline
+          <section class="lg:col-start-3 lg:col-span-1">
+            <div class="bg-gray-100 px-4 py-5 shadow sm:rounded-lg sm:px-6">
+              <h2 class="text-lg font-medium text-gray-900">
+                Résultats récents
               </h2>
 
               <div class="mt-6 flow-root">
@@ -330,7 +314,7 @@ const PlayerCard = () => {
                         <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                           <div>
                             <p class="text-sm text-gray-500">
-                              Completed interview with{" "}
+                              Completed interview with
                               <a href="#" class="font-medium text-gray-900">
                                 Katherine Snyder
                               </a>

@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import SearchInput from "./SearchInput";
 
 const Header = () => {
+  const [affilie, setAffilie] = useState("");
+
+  const handleSearch = (value) => {
+    setAffilie(value);
+  };
   return (
     <header class="bg-gray-50">
       <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
           <div class="flex-1 md:flex md:items-center md:gap-12">
-           <p className="text-3xl">🎾</p>
+            <p className="text-3xl">🎾</p>
           </div>
 
           <div class="md:flex md:items-center md:gap-12">
@@ -69,12 +75,7 @@ const Header = () => {
             </nav>
 
             <div class="sm:flex sm:gap-4">
-              <a
-                class="rounded-md bg-[#D0570C] px-5 py-2.5 text-sm font-medium text-white shadow"
-                href="/"
-              >
-                Login
-              </a>
+              <SearchInput onSearch={handleSearch} />
             </div>
 
             <div class="block md:hidden">
