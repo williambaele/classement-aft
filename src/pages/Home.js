@@ -4,6 +4,7 @@ import axios from "axios";
 import cheerio from "cheerio";
 import SearchInput from "../components/SearchInput";
 import Footer from "../components/Footer";
+import PlayerCard from "../components/PlayerCard";
 
 const Home = () => {
   //PLAYER INFOS
@@ -51,10 +52,9 @@ const Home = () => {
       <div className="h-screen flex flex-col justify-between">
         <SearchInput onSearch={handleSearch} />
         <div className="mx-auto container">
-          <p>
-            {points} - {name} - {currentClassement}
-          </p>
+          <PlayerCard name={name}/>
         </div>
+
         <Footer />
       </div>
     </>
