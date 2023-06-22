@@ -20,7 +20,7 @@ const PlayerCard = ({ name, numAffilie }) => {
               </div>
             </div>
             <div>
-              <h1 class="text-2xl font-bold text-gray-900">{name}</h1>
+              <h1 class="text-3xl font-bold text-gray-900">{name ? name : "BAELE William"}</h1>
             </div>
           </div>
 
@@ -47,7 +47,6 @@ const PlayerCard = ({ name, numAffilie }) => {
             </div>
           </a>
         </div>
-
         <div class="mt-8 mx-auto grid grid-cols-1 gap-6 lg:grid-cols-3">
           <div class="lg:col-start-1 lg:col-span-2">
             <section>
@@ -58,7 +57,7 @@ const PlayerCard = ({ name, numAffilie }) => {
                   </h2>
                 </div>
                 <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
-                  <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+                  <dl class="grid grid-cols-1 gap-x-4 gap-y-9 sm:grid-cols-2">
                     <div class="sm:col-span-1">
                       <dt class="text-sm font-medium text-gray-500">Club</dt>
                       <dd class="mt-1 text-sm text-gray-900">Davis</dd>
@@ -70,27 +69,38 @@ const PlayerCard = ({ name, numAffilie }) => {
                       <dd class="mt-1 text-sm text-gray-900">12 mars 2019</dd>
                     </div>
                     <div class="sm:col-span-1">
-                      <dt class="text-sm font-medium text-gray-500">
-                        Salary expectation
-                      </dt>
-                      <dd class="mt-1 text-sm text-gray-900">$120,000</dd>
+                      <dt class="text-sm font-medium text-gray-500">Sexe </dt>
+                      <dd class="mt-1 text-sm text-gray-900">Homme</dd>
                     </div>
                     <div class="sm:col-span-1">
-                      <dt class="text-sm font-medium text-gray-500">Phone</dt>
-                      <dd class="mt-1 text-sm text-gray-900">
-                        +1 555-555-5555
-                      </dd>
+                      <dt class="text-sm font-medium text-gray-500">Age</dt>
+                      <dd class="mt-1 text-sm text-gray-900">23 ans</dd>
                     </div>
-                    <div class="sm:col-span-2">
-                      <dt class="text-sm font-medium text-gray-500">About</dt>
-                      <dd class="mt-1 text-sm text-gray-900">
-                        Fugiat ipsum ipsum deserunt culpa aute sint do nostrud
-                        anim incididunt cillum culpa consequat. Excepteur qui
-                        ipsum aliquip consequat sint. Sit id mollit nulla mollit
-                        nostrud in ea officia proident. Irure nostrud pariatur
-                        mollit ad adipisicing reprehenderit deserunt qui eu.
-                      </dd>
+                    <div class="sm:col-span-1">
+                      <dt class="text-sm font-medium text-gray-500">
+                        Classement simple
+                      </dt>
+                      <dd class="mt-1 text-sm text-gray-900">C30.5</dd>
                     </div>
+                    <div class="sm:col-span-1">
+                      <dt class="text-sm font-medium text-gray-500">
+                        Classement simple interclubs
+                      </dt>
+                      <dd class="mt-1 text-sm text-gray-900">C30.4</dd>
+                    </div>
+                    <div class="sm:col-span-1">
+                      <dt class="text-sm font-medium text-gray-500">
+                        Total des matchs joués cette année
+                      </dt>
+                      <dd class="mt-1 text-sm text-gray-900">10</dd>
+                    </div>
+                    <div class="sm:col-span-1">
+                      <dt class="text-sm font-medium text-gray-500">
+                        Total des victoires de cette année
+                      </dt>
+                      <dd class="mt-1 text-sm text-gray-900">9</dd>
+                    </div>
+
                     <div class="sm:col-span-2">
                       <dt class="text-sm font-medium text-gray-500">
                         Prédiction de classement
@@ -114,13 +124,13 @@ const PlayerCard = ({ name, numAffilie }) => {
                 <h2 class="text-2xl leading-6 font-medium text-gray-900">
                   Résultats récents
                 </h2>
-                <div className="w-28 rounded-xl flex">
+                <div className="w-28 rounded-xl flex max-h-8">
                   <div
-                    className="h-full rounded-l-xl bg-green-600"
+                    className="h-full rounded-l-xl bg-orange-600"
                     style={{ width: "66.66%" }}
                   ></div>
                   <div
-                    className="h-full rounded-r-xl bg-red-600"
+                    className="h-full rounded-r-xl bg-gray-600"
                     style={{ width: "33.33%" }}
                   ></div>
                 </div>
@@ -135,7 +145,7 @@ const PlayerCard = ({ name, numAffilie }) => {
                       ></span>
                       <div class="relative flex space-x-3">
                         <div>
-                          <span class="h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
+                          <span class="h-6 w-6 rounded-full bg-orange-600 flex items-center justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -170,7 +180,7 @@ const PlayerCard = ({ name, numAffilie }) => {
                       ></span>
                       <div class="relative flex space-x-3">
                         <div>
-                          <span class="h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
+                          <span class="h-6 w-6 rounded-full bg-orange-600 flex items-center justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -205,7 +215,7 @@ const PlayerCard = ({ name, numAffilie }) => {
                       ></span>
                       <div class="relative flex space-x-3">
                         <div>
-                          <span class="h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
+                          <span class="h-6 w-6 rounded-full bg-orange-600 flex items-center justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -240,7 +250,7 @@ const PlayerCard = ({ name, numAffilie }) => {
                       ></span>
                       <div class="relative flex space-x-3">
                         <div>
-                          <span class="h-6 w-6 rounded-full bg-red-600 flex items-center justify-center">
+                          <span class="h-6 w-6 rounded-full bg-gray-600 flex items-center justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -275,7 +285,7 @@ const PlayerCard = ({ name, numAffilie }) => {
                       ></span>
                       <div class="relative flex space-x-3">
                         <div>
-                          <span class="h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
+                          <span class="h-6 w-6 rounded-full bg-orange-600 flex items-center justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -306,7 +316,7 @@ const PlayerCard = ({ name, numAffilie }) => {
                     <div class="relative">
                       <div class="relative flex space-x-3">
                         <div>
-                          <span class="h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
+                          <span class="h-6 w-6 rounded-full bg-orange-600 flex items-center justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
