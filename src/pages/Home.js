@@ -8,13 +8,19 @@ const Home = () => {
 
   const [classement, setClassement] = useState("");
   const [name, setName] = useState("");
+  const [affilie, setAffilie] = useState("")
+  const handleSearch = (value) => {
+    // Handle the received value from the SearchInput component
+    setAffilie(value)
+    // Perform any necessary operations with the value
+  };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         // AVOIDING CORS RESTRCITIONS
         const response = await axios.get(
-          "https://cors-anywhere.herokuapp.com/https://www.aftnet.be/MyAFT/Players/Detail/1082852",
+          `https://cors-anywhere.herokuapp.com/https://www.aftnet.be/MyAFT/Players/Detail/${affilie}`,
           {
             headers: {
               "X-Requested-With": "XMLHttpRequest",
@@ -33,12 +39,14 @@ const Home = () => {
     };
 
     fetchData();
-  }, []);
+  }, [affilie]);
+
+
 
   return (
     <div className="h-screen">
       <Header/>
-      <SearchInput/>
+      <SearchInput onSearch={handleSearch} />
       <p>
         {classement} - {name}
         </p>
