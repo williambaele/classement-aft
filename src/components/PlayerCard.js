@@ -1,9 +1,6 @@
 import React from "react";
 
-
-const PlayerCard = ({name}) => {
-
-
+const PlayerCard = ({ name }) => {
   return (
     <div class="min-h-full">
       <main class="py-10">
@@ -23,9 +20,7 @@ const PlayerCard = ({name}) => {
               </div>
             </div>
             <div>
-              <h1 class="text-2xl font-bold text-gray-900">
-                {name}
-              </h1>
+              <h1 class="text-2xl font-bold text-gray-900">{name}</h1>
             </div>
           </div>
         </div>
@@ -92,13 +87,15 @@ const PlayerCard = ({name}) => {
           </div>
 
           <section class="lg:col-start-3 lg:col-span-1">
-            <div class="bg-gray-100 px-4 py-5 shadow sm:rounded-lg sm:px-6">
-              <h2 class="text-lg font-medium text-gray-900">
-                Résultats récents
-              </h2>
+            <div class="bg-gray-100  shadow sm:rounded-lg ">
+              <div class="px-4 py-5 sm:px-6">
+                <h2 class="text-lg leading-6 font-medium text-gray-900">
+                  Résultats récents
+                </h2>
+              </div>
 
-              <div class="mt-6 flow-root">
-                <ul role="list" class="-mb-8">
+              <div class="border-t border-gray-200 ">
+                <ul role="list" class="p-6">
                   <li>
                     <div class="relative pb-8">
                       <span

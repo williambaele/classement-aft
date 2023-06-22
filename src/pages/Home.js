@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import PlayerCard from "../components/PlayerCard";
 import axios from "axios";
 import cheerio from "cheerio";
-import MatchHistory from "../components/MatchHistory";
+
 const Home = () => {
   //PLAYER INFOS
   const [points, setPoints] = useState("");
