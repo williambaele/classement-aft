@@ -1,27 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import cheerio from 'cheerio';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import cheerio from "cheerio";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 const App = () => {
-  const [data, setData] = useState('');
+  const [data, setData] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // AVOIDING CORS RESTRCITIONS
         const response = await axios.get(
-          'https://cors-anywhere.herokuapp.com/https://www.aftnet.be/MyAFT/Players/Detail/1082852',
+          "https://cors-anywhere.herokuapp.com/https://www.aftnet.be/MyAFT/Players/Detail/1082852",
           {
             headers: {
-              'X-Requested-With': 'XMLHttpRequest',
+              "X-Requested-With": "XMLHttpRequest",
             },
           }
         );
-
-        // Use cheerio to parse the HTML response
+        // GETTING THE RIGHT HTML TAG TO SCRAP
         const $ = cheerio.load(response.data);
-
-        // Find the desired HTML tag and extract the text value
-        const value = $('a[onclick^="$(\'#pointDetailsModalDialog\')"]').text();
+        const value = $("a[onclick^=\"$('#pointDetailsModalDialog')\"]").text();
 
         setData(value);
       } catch (error) {
@@ -33,13 +33,13 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-      <h1>Extracted Value:</h1>
-      <p>{data}</p>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home data={data}/>} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 };
 
