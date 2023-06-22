@@ -9,16 +9,17 @@ const SearchInput = ({ onSearch }) => {
   };
 
   return (
-    <div className="bg-red-300 p-8">
-      <form onSubmit={handleSubmit}>
+    <div>
+      <form onSubmit={handleSubmit} className="grid grid-cols-4 gap-2">
         <input
           type="text"
-          className="bg-green-200"
+          className="bg-gray-100 rounded-md p-1 col-span-3 outline-none ml-2"
+          placeholder="Numéro d'affilié"
           value={numAffilie}
           onChange={(e) => setNumAffilie(e.target.value)}
         />
-        <button type="submit" className="bg-purple-200">
-          submit
+        <button type="submit" className="bg-[#D0570C] rounded-md text-white text-md font-large p-1 hover:bg-[#D0570C]/80">
+          Chercher
         </button>
       </form>
     </div>
