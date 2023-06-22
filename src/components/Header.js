@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import SearchInput from "./SearchInput";
 
-const Header = () => {
-  const [affilie, setAffilie] = useState("");
+const Header = ({ onSearch }) => {
+  const [numAffilie, setNumAffilie] = useState("");
 
-  const handleSearch = (value) => {
-    setAffilie(value);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSearch(numAffilie);
   };
   return (
     <header class="bg-gray-50">
@@ -16,66 +16,27 @@ const Header = () => {
           </div>
 
           <div class="md:flex md:items-center md:gap-12">
-            <nav aria-label="Global" class="hidden md:block">
-              <ul class="flex items-center gap-6 text-sm">
-                <li>
-                  <a
-                    class="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
-                  >
-                    About
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    class="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
-                  >
-                    Careers
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    class="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
-                  >
-                    History
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    class="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
-                  >
-                    Services
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    class="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
-                  >
-                    Projects
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    class="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
-                  >
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </nav>
-
             <div class="sm:flex sm:gap-4">
-              <SearchInput onSearch={handleSearch} />
+              <div>
+                <form
+                  onSubmit={handleSubmit}
+                  className="grid grid-cols-4 gap-2"
+                >
+                  <input
+                    type="text"
+                    className="bg-gray-200 rounded-md p-1 col-span-3 outline-none ml-5"
+                    placeholder="Numéro d'affilié"
+                    value={numAffilie}
+                    onChange={(e) => setNumAffilie(e.target.value)}
+                  />
+                  <button
+                    type="submit"
+                    className="bg-[#D0570C] rounded-md text-white text-md font-large p-1 hover:bg-[#D0570C]/80"
+                  >
+                    Chercher
+                  </button>
+                </form>
+              </div>{" "}
             </div>
 
             <div class="block md:hidden">

@@ -1,43 +1,8 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import cheerio from "cheerio";
-
-const PlayerCard = ({affilie}) => {
-  //PLAYER INFOS
-  const [points, setPoints] = useState("");
-  const [name, setName] = useState("");
-  const [currentClassement, setCurrentClassement] = useState("");
+import React from "react";
 
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // AVOIDING CORS RESTRCITIONS
-        const response = await axios.get(
-          `https://cors-anywhere.herokuapp.com/https://www.aftnet.be/MyAFT/Players/Detail/${affilie}`,
-          {
-            headers: {
-              "X-Requested-With": "XMLHttpRequest",
-            },
-          }
-        );
-        // GETTING THE RIGHT HTML TAG TO SCRAP
-        const $ = cheerio.load(response.data);
-        const value = $("a[onclick^=\"$('#pointDetailsModalDialog')\"]").text();
-        console.log(value);
-        setPoints(value);
-        const playerName = $("#player-title").text();
-        setName(playerName);
-        const scrappedClassement = $("#colInfo").text();
-        setCurrentClassement(scrappedClassement);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    console.log("searched" + affilie);
+const PlayerCard = ({name}) => {
 
-    fetchData();
-  }, []);
 
   return (
     <div class="min-h-full">
@@ -60,7 +25,6 @@ const PlayerCard = ({affilie}) => {
             <div>
               <h1 class="text-2xl font-bold text-gray-900">
                 {name}
-                {points}
               </h1>
             </div>
           </div>
