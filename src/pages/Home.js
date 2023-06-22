@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import Header from '../components/Header';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import Header from "../components/Header";
+import axios from "axios";
 import cheerio from "cheerio";
-import SearchInput from '../components/SearchInput';
+import SearchInput from "../components/SearchInput";
+import Footer from "../components/Footer";
 
 const Home = () => {
-
   const [classement, setClassement] = useState("");
   const [name, setName] = useState("");
-  const [affilie, setAffilie] = useState("")
+  const [affilie, setAffilie] = useState("");
   const handleSearch = (value) => {
     // Handle the received value from the SearchInput component
-    setAffilie(value)
+    setAffilie(value);
     // Perform any necessary operations with the value
   };
 
@@ -41,15 +41,14 @@ const Home = () => {
     fetchData();
   }, [affilie]);
 
-
-
   return (
     <div className="h-screen">
-      <Header/>
+      <Header />
       <SearchInput onSearch={handleSearch} />
       <p>
         {classement} - {name}
-        </p>
+      </p>
+      <Footer/>
     </div>
   );
 };
