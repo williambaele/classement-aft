@@ -3,8 +3,9 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PlayerCard from "../components/PlayerCard";
 import axios from "axios";
-import cheerio from "cheerio"
-;const Home = () => {
+import cheerio from "cheerio";
+import MatchHistory from "../components/MatchHistory";
+const Home = () => {
   //PLAYER INFOS
   const [points, setPoints] = useState("");
   const [name, setName] = useState("");
@@ -49,8 +50,12 @@ import cheerio from "cheerio"
     <>
       <Header onSearch={handleSearch} />
       <div className="h-screen flex flex-col justify-between">
-        <div className="mx-auto container">
-          <PlayerCard name={name} points={points} currentClassement={currentClassement}/>
+        <div className="mx-auto container px-4 md:px-0">
+          <PlayerCard
+            name={name}
+            points={points}
+            currentClassement={currentClassement}
+          />
         </div>
         <Footer />
       </div>

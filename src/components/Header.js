@@ -24,38 +24,28 @@ const Header = ({ onSearch }) => {
                 >
                   <input
                     type="text"
-                    className="bg-gray-200 rounded-md p-1 col-span-3 outline-none ml-5"
+                    className="bg-gray-200 rounded-md p-1 col-span-3 outline-none pl-2"
                     placeholder="Numéro d'affilié"
                     value={numAffilie}
                     onChange={(e) => setNumAffilie(e.target.value)}
                   />
                   <button
                     type="submit"
-                    className="bg-[#D0570C] rounded-md text-white text-md font-large p-1 hover:bg-[#D0570C]/80"
+                    className="bg-[#D0570C] rounded-md text-white text-md font-large p-1 hover:bg-[#D0570C]/80 flex items-center justify-center"
                   >
-                    Chercher
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-search"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
                   </button>
                 </form>
-              </div>{" "}
-            </div>
-
-            <div class="block md:hidden">
-              <button class="rounded bg-[#D0570C] p-2 text-gray-600 transition hover:text-gray-600/75">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
+              </div>
             </div>
           </div>
         </div>
