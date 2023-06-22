@@ -6,8 +6,10 @@ import SearchInput from "../components/SearchInput";
 import Footer from "../components/Footer";
 
 const Home = () => {
-  const [classement, setClassement] = useState("");
+  //PLAYER INFOS
+  const [points, setPoints] = useState("");
   const [name, setName] = useState("");
+  const [currentClassement, setCurrentClassement] = useState("");
   const [affilie, setAffilie] = useState("");
   const handleSearch = (value) => {
     // Handle the received value from the SearchInput component
@@ -30,9 +32,11 @@ const Home = () => {
         // GETTING THE RIGHT HTML TAG TO SCRAP
         const $ = cheerio.load(response.data);
         const value = $("a[onclick^=\"$('#pointDetailsModalDialog')\"]").text();
-        setClassement(value);
-        const valueFromSpan = $("#player-title").text();
-        setName(valueFromSpan);
+        setPoints(value);
+        const playerName = $("#player-title").text();
+        setName(playerName);
+        const scrappedClassement = $("#colInfo").text();
+        setCurrentClassement(scrappedClassement);
       } catch (error) {
         console.error(error);
       }
@@ -42,14 +46,18 @@ const Home = () => {
   }, [affilie]);
 
   return (
-    <div className="h-screen">
+    <>
       <Header />
-      <SearchInput onSearch={handleSearch} />
-      <p>
-        {classement} - {name}
-      </p>
-      <Footer/>
-    </div>
+      <div className="h-screen flex flex-col justify-between">
+        <SearchInput onSearch={handleSearch} />
+        <div className="mx-auto container">
+          <p>
+            {points} - {name} - {currentClassement}
+          </p>
+        </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
