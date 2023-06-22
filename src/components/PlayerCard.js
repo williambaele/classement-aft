@@ -4,44 +4,44 @@ import axios from "axios";
 import cheerio from "cheerio";
 
 const PlayerCard = () => {
-   //PLAYER INFOS
-   const [points, setPoints] = useState("");
-   const [name, setName] = useState("");
-   const [currentClassement, setCurrentClassement] = useState("");
-   const [affilie, setAffilie] = useState("");
-   const handleSearch = (value) => {
-     setAffilie(value);
-   };
+  //PLAYER INFOS
+  const [points, setPoints] = useState("");
+  const [name, setName] = useState("");
+  const [currentClassement, setCurrentClassement] = useState("");
+  const [affilie, setAffilie] = useState("");
+  const handleSearch = (value) => {
+    setAffilie(value);
+  };
 
-   useEffect(() => {
-     const fetchData = async () => {
-       try {
-         // AVOIDING CORS RESTRCITIONS
-         const response = await axios.get(
-           `https://cors-anywhere.herokuapp.com/https://www.aftnet.be/MyAFT/Players/Detail/${affilie}`,
-           {
-             headers: {
-               "X-Requested-With": "XMLHttpRequest",
-             },
-           }
-         );
-         // GETTING THE RIGHT HTML TAG TO SCRAP
-         const $ = cheerio.load(response.data);
-         const value = $("a[onclick^=\"$('#pointDetailsModalDialog')\"]").text();
-         console.log(value)
-         setPoints(value);
-         const playerName = $("#player-title").text();
-         setName(playerName);
-         const scrappedClassement = $("#colInfo").text();
-         setCurrentClassement(scrappedClassement);
-       } catch (error) {
-         console.error(error);
-       }
-     };
-     console.log("searched" + affilie)
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // AVOIDING CORS RESTRCITIONS
+        const response = await axios.get(
+          `https://cors-anywhere.herokuapp.com/https://www.aftnet.be/MyAFT/Players/Detail/${affilie}`,
+          {
+            headers: {
+              "X-Requested-With": "XMLHttpRequest",
+            },
+          }
+        );
+        // GETTING THE RIGHT HTML TAG TO SCRAP
+        const $ = cheerio.load(response.data);
+        const value = $("a[onclick^=\"$('#pointDetailsModalDialog')\"]").text();
+        console.log(value);
+        setPoints(value);
+        const playerName = $("#player-title").text();
+        setName(playerName);
+        const scrappedClassement = $("#colInfo").text();
+        setCurrentClassement(scrappedClassement);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    console.log("searched" + affilie);
 
-     fetchData();
-   }, []);
+    fetchData();
+  }, []);
 
   return (
     <div class="min-h-full">
@@ -62,48 +62,42 @@ const PlayerCard = () => {
               </div>
             </div>
             <div>
-              <h1 class="text-2xl font-bold text-gray-900">{name}{points}</h1>
-              <p class="text-sm font-medium text-gray-500">
-               Joueur au club:
-              </p>
+              <h1 class="text-2xl font-bold text-gray-900">
+                {name}
+                {points}
+              </h1>
             </div>
           </div>
           <div class="mt-6 flex flex-col-reverse justify-stretch space-y-4 space-y-reverse sm:flex-row-reverse sm:justify-end sm:space-x-reverse sm:space-y-0 sm:space-x-3 md:mt-0 md:flex-row md:space-x-3">
-          <SearchInput onSearch={handleSearch} />
+            <SearchInput onSearch={handleSearch} />
           </div>
         </div>
 
         <div class="mt-8 max-w-3xl mx-auto grid grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
-          <div class="space-y-6 lg:col-start-1 lg:col-span-2">
-            <section aria-labelledby="applicant-information-title">
-              <div class="bg-white shadow sm:rounded-lg">
+          <div class="space-y-6 lg:col-start-1 lg:col-span-2 ">
+            <section>
+              <div class="bg-gray-100 shadow sm:rounded-lg ">
                 <div class="px-4 py-5 sm:px-6">
-                  <h2
-                    id="applicant-information-title"
-                    class="text-lg leading-6 font-medium text-gray-900"
-                  >
-                    Applicant Information
+                  <h2 class="text-lg leading-6 font-medium text-gray-900">
+                    Information du joueur
                   </h2>
-                  <p class="mt-1 max-w-2xl text-sm text-gray-500">
-                    Personal details and application.
-                  </p>
                 </div>
                 <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
                   <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                     <div class="sm:col-span-1">
                       <dt class="text-sm font-medium text-gray-500">
-                        Application for
+                        Club
                       </dt>
                       <dd class="mt-1 text-sm text-gray-900">
-                        Backend Developer
+                        Davis
                       </dd>
                     </div>
                     <div class="sm:col-span-1">
                       <dt class="text-sm font-medium text-gray-500">
-                        Email address
+                        Actif depuis
                       </dt>
                       <dd class="mt-1 text-sm text-gray-900">
-                        ricardocooper@example.com
+                        12 mars 2019
                       </dd>
                     </div>
                     <div class="sm:col-span-1">
@@ -129,7 +123,9 @@ const PlayerCard = () => {
                       </dd>
                     </div>
                     <div class="sm:col-span-2">
-                    <dt class="text-sm font-medium text-gray-500">Prédiction de classement</dt>
+                      <dt class="text-sm font-medium text-gray-500">
+                        Prédiction de classement
+                      </dt>
                       <dd class="mt-1 text-sm text-gray-900">
                         Fugiat ipsum ipsum deserunt culpa aute sint do nostrud
                         anim incididunt cillum culpa consequat. Excepteur qui
