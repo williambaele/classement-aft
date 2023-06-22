@@ -90,27 +90,23 @@ const PlayerCard = ({ name, numAffilie }) => {
                     </div>
                     <div class="sm:col-span-1">
                       <dt class="text-sm font-medium text-gray-500">
-                        Total des matchs joués cette année
+                        Total des matchs joués cette saison
                       </dt>
                       <dd class="mt-1 text-sm text-gray-900">10</dd>
                     </div>
                     <div class="sm:col-span-1">
                       <dt class="text-sm font-medium text-gray-500">
-                        Total des victoires de cette année
+                        Total des victoires de cette saison
                       </dt>
                       <dd class="mt-1 text-sm text-gray-900">9</dd>
                     </div>
 
                     <div class="sm:col-span-2">
                       <dt class="text-sm font-medium text-gray-500">
-                        Prédiction de classement
+                        Prédiction de classement pour la saison prochaine
                       </dt>
                       <dd class="mt-1 text-sm text-gray-900">
-                        Fugiat ipsum ipsum deserunt culpa aute sint do nostrud
-                        anim incididunt cillum culpa consequat. Excepteur qui
-                        ipsum aliquip consequat sint. Sit id mollit nulla mollit
-                        nostrud in ea officia proident. Irure nostrud pariatur
-                        mollit ad adipisicing reprehenderit deserunt qui eu.
+                        C30.1
                       </dd>
                     </div>
                   </dl>
