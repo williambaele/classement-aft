@@ -1,10 +1,10 @@
 import React from "react";
 
-const PlayerCard = ({ name }) => {
+const PlayerCard = ({ name, numAffilie }) => {
   return (
     <div class="min-h-full">
       <main class="py-10">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 md:flex md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8">
+        <div class="flex justify-between items-center mx-auto container">
           <div class="flex items-center space-x-5">
             <div class="flex-shrink-0">
               <div class="relative">
@@ -23,9 +23,33 @@ const PlayerCard = ({ name }) => {
               <h1 class="text-2xl font-bold text-gray-900">{name}</h1>
             </div>
           </div>
+
+          <a href={`https://www.aftnet.be/MyAFT/Players/Detail/${numAffilie}`}>
+            <div className="bg-orange-600 flex gap-3 p-2 px-3 rounded-md items-center">
+              <p className="text-white font-large">Fiche complète</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="#FFFFFF"
+                class="bi bi-box-arrow-up-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+                />
+              </svg>
+            </div>
+          </a>
+
         </div>
 
-        <div class="mt-8 max-w-3xl mx-auto grid grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
+        <div class="mt-8 mx-auto grid grid-cols-1 gap-6 lg:grid-cols-3">
           <div class="space-y-6 lg:col-start-1 lg:col-span-2 ">
             <section>
               <div class="bg-gray-100 shadow sm:rounded-lg ">

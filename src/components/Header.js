@@ -31,7 +31,7 @@ const Header = ({ onSearch }) => {
                   />
                   <button
                     type="submit"
-                    className="bg-[#D0570C] rounded-md text-white text-md font-large p-1 hover:bg-[#D0570C]/80 flex items-center justify-center"
+                    className="bg-orange-600 rounded-md text-white text-md font-large p-1 hover:bg-[#D0570C]/80 flex items-center justify-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

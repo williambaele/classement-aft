@@ -55,6 +55,7 @@ const Home = () => {
             name={name}
             points={points}
             currentClassement={currentClassement}
+            numAffilie={numAffilie}
           />
         </div>
         <Footer />
